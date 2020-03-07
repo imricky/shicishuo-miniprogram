@@ -86,7 +86,7 @@
   top: 50%;
   transform: translateY(-50%);
   color: #909399;
-  /*left: 5%;*/
+  left: 5%;
 }
 
 /*每日一句主要部分*/
@@ -100,7 +100,7 @@
 }
 .paragraph-all{
   width: 100%;
-  /*margin-left: 5%;*/
+  margin-left: 5%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
