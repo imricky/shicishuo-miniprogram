@@ -1,0 +1,45 @@
+<!--logs.wxml-->
+<!--<view class="container log-list">-->
+<!--  <block wx:for="{{logs}}" wx:for-item="log">-->
+<!--    <text class="log-item">{{index + 1}}. {{log}}</text>-->
+<!--  </block>-->
+<!--</view>-->
+
+<view class="container">
+  <view class="poem">
+    <text class="title">望岳</text>
+    <view class="poem-top">
+      <text class="author-info">【唐】<text class="author"> 杜甫</text></text>
+    </view>
+    <view class="poem-main">
+      <text wx:for="{{array}}" wx:key="unique">{{index}}: {{item.message}}</text>
+    </view>
+    <view class="tag-and-button">
+      <block>
+        <text wx:for="{{tags}}" wx:key="*this" class="tag"> {{item}} </text>
+      </block>
+      <block class="collect-container">
+        <button type="primary" size="mini" plain="{{true}}" bindtap="collect" class="collect-container"> 收藏 </button>
+      </block>
+    </view>
+
+  </view>
+  <view class="paragraph">
+    <view class="top">
+      <text class="paragraph-title">每日名句</text>
+    </view>
+    <view class="main">
+      <view class="paragraph-all">
+        <image style="width: 200rpx; height: 200rpx; background-color: #eeeeee;" mode="scaleToFill" src="{{src}}"></image>
+        <view class="paragraph-info">
+          <text class="paragraph-content">宝剑锋从磨砺出</text>
+          <text class="paragraph-content">梅花香自苦寒来</text>
+          <text class="paragraph-author">——杜甫《望岳》</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <my-footer></my-footer>
+  </view>
+</view>

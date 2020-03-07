@@ -1,0 +1,121 @@
+/* pages/daily/daily.wxss */
+/*poem的css*/
+.poem{
+  /*margin-top: -120rpx;*/
+  /*margin-top: 40prx;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 30rpx solid #DCDFE6;
+  width: 100%;
+  /*border-radius: 8rpx;*/
+}
+.title{
+  font-size: 50rpx;
+  margin-top: 10rpx solid red;
+  font-weight: bold;
+}
+.poem-top{
+  border-bottom: 2rpx solid #E4E7ED;
+  width: 100%;
+}
+.author-info{
+  float: right;
+  margin-right: 100rpx;
+  margin-bottom: 20rpx;
+  color: #606266;
+}
+.author{
+  color: #606266;
+}
+.poem-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20rpx;
+  color: #303133;
+}
+
+.tag-and-button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40rpx;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.tag{
+  float: left;
+  margin-left: 30rpx;
+}
+.collect-container{
+  float: right;
+  margin-right: 30rpx;
+}
+
+/*paragraph的css*/
+.paragraph{
+  /*margin-top: 40rpx;*/
+  /*border: 2rpx solid black;*/
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  /*border-top: 4rpx solid #DCDFE6;*/
+  /*border-radius: 10rpx;*/
+}
+
+/*每日一句title部分*/
+.top{
+  /*border: 2rpx solid red;*/
+  height: 120rpx;
+  width: 100%;
+  position:relative;
+  border-bottom: 2rpx solid #E4E7ED;
+}
+.paragraph-title{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #909399;
+  /*left: 5%;*/
+}
+
+/*每日一句主要部分*/
+.main{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+.paragraph-all{
+  width: 100%;
+  /*margin-left: 5%;*/
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.paragraph-info{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 10rpx;
+}
+.paragraph-content{
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.paragraph-author{
+  align-self: flex-end;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+  color: #606266;
+}

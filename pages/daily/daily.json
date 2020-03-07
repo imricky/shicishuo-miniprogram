@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "每日一诗",
+  "usingComponents": {
+    "my-footer": "../footer/footer",
+    "mp-toptips": "../../miniprogram_npm/weui-miniprogram/toptips/toptips",
+    "mp-msg": "../../miniprogram_npm/weui-miniprogram/msg/msg"
+  }
+}
