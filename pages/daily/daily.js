@@ -32,9 +32,28 @@ Page({
     // })
   },
   splitParagraph: function(value){
-    let data = value.split('，');
-    data[0] += '，';
-    return data;
+    let res = [];
+    if(!value.includes('，')){
+      let temp =  value.split('。').map((i)=>{
+        return i += '。';
+      });
+      temp = temp.slice(0,temp.length-1);
+      return temp;
+    }
+    let mid = value.split('。');
+    for(let i = 0;i<mid.length;i++){
+      if(mid[i].includes('，')){
+        let temp = mid[i].split('，');
+        temp[0] += '，';
+        temp[1] += '。';
+        res.push(temp[0]);
+        res.push(temp[1]);
+      }else {
+        mid[i] += '。';
+        res.push(mid[i])
+      }
+    }
+    return res.slice(0,res.length-1);
   },
 
   /**

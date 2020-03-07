@@ -26,7 +26,7 @@
   </view>
   <view class="paragraph">
     <view class="top">
-      <text class="paragraph-title">{{poemCardData.title}}</text>
+      <text class="paragraph-title">每日名句</text>
     </view>
     <view class="main">
       <view class="paragraph-all">
