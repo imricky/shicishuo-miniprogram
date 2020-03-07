@@ -11,6 +11,8 @@
   /*border: 1rpx solid #DCDFE6;*/
   /*margin: 0 40rpx;*/
   margin-top: 20rpx;
+  /*解决底栏被挡tabBar挡住的问题,模拟器可以，但是真机不可以*/
+  /*margin-bottom: 150rpx;*/
 }
 /*设置全局背景颜色*/
 page {

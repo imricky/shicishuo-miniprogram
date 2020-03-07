@@ -43,4 +43,5 @@
   <view>
     <my-footer></my-footer>
   </view>
+  <view class='placeholder-view'></view>
 </view>
