@@ -38,6 +38,10 @@
   color: #303133;
 }
 
+.poem-text{
+  margin-bottom: 36rpx;
+}
+
 .tag-and-button{
   display: flex;
   justify-content: space-between;

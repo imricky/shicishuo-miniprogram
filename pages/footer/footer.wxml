@@ -1,2 +1,2 @@
 <!--pages/footer/footer.wxml-->
-<text style="margin-top: 20rpx">© 2020 | 诗词说 |  imricky</text>
+<text style="margin-top: 20rpx; color: #C0C4CC">© 2020 |  imricky</text>

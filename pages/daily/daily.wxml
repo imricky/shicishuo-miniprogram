@@ -7,16 +7,16 @@
 
 <view class="container">
   <view class="poem">
-    <text class="title">望岳</text>
+    <text class="title">{{poem.title}}</text>
     <view class="poem-top">
-      <text class="author-info">【唐】<text class="author"> 杜甫</text></text>
+      <text class="author-info">【唐】<text class="author"> {{poem.author}}</text></text>
     </view>
     <view class="poem-main">
-      <text wx:for="{{array}}" wx:key="unique">{{index}}: {{item.message}}</text>
+      <text wx:for="{{poem.paragraphs}}" wx:key="*this" class="poem-text">{{item}}</text>
     </view>
     <view class="tag-and-button">
       <block>
-        <text wx:for="{{tags}}" wx:key="*this" class="tag"> {{item}} </text>
+        <text wx:for="{{poem.tags}}" wx:key="*this" class="tag"> {{item}} </text>
       </block>
       <block class="collect-container">
         <button type="primary" size="mini" plain="{{true}}" bindtap="collect" class="collect-container"> 收藏 </button>
@@ -26,15 +26,16 @@
   </view>
   <view class="paragraph">
     <view class="top">
-      <text class="paragraph-title">每日名句</text>
+      <text class="paragraph-title">{{poemCardData.title}}</text>
     </view>
     <view class="main">
       <view class="paragraph-all">
         <image style="width: 200rpx; height: 200rpx; background-color: #eeeeee;" mode="scaleToFill" src="{{src}}"></image>
         <view class="paragraph-info">
-          <text class="paragraph-content">宝剑锋从磨砺出</text>
-          <text class="paragraph-content">梅花香自苦寒来</text>
-          <text class="paragraph-author">——杜甫《望岳》</text>
+          <block wx:for="{{paragraph.content}}" wx:key="*this">
+            <text  class="paragraph-content">{{item}}</text>
+          </block>
+          <text class="paragraph-author">——{{paragraph.poetName}}《{{paragraph.poetryName}}》</text>
         </view>
       </view>
     </view>
