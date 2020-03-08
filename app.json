@@ -1,11 +1,11 @@
 {
   "pages": [
     "pages/daily/daily",
-    "pages/logs/logs",
-    "pages/index/index",
     "pages/explore/explore",
     "pages/cool/cool",
-    "pages/library/library"
+    "pages/library/library",
+    "pages/logs/logs",
+    "pages/index/index"
   ],
   "tabBar": {
     "custom": true,
@@ -16,26 +16,26 @@
     "list": [
       {
         "pagePath": "pages/daily/daily",
-        "iconPath": "image/day.png",
-        "selectedIconPath": "image/day_HL.png",
+        "iconPath": "/image/day.png",
+        "selectedIconPath": "/image/day_HL.png",
         "text": "每日一诗"
       },
       {
         "pagePath": "pages/explore/explore",
-        "iconPath": "image/explore.png",
-        "selectedIconPath": "image/explore_HL.png",
+        "iconPath": "/image/explore.png",
+        "selectedIconPath": "/image/explore_HL.png",
         "text": "探索好诗"
       },
       {
         "pagePath": "pages/library/library",
-        "iconPath": "image/library.png",
+        "iconPath": "/image/library.png",
         "selectedIconPath": "image/library_HL.png",
         "text": "文库大全"
       },
       {
         "pagePath": "pages/cool/cool",
-        "iconPath": "image/cool.png",
-        "selectedIconPath": "image/cool_HL.png",
+        "iconPath": "/image/cool.png",
+        "selectedIconPath": "/image/cool_HL.png",
         "text": "酷功能"
       }
     ]

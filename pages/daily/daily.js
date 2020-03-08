@@ -77,6 +77,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    if (typeof this.getTabBar === 'function' &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 0
+      })
+    }
     var _self = this;
     wx.request({
       url: 'https://api.rqcao.com/poems/getDailyPoem', //仅为示例，并非真实的接口地址
