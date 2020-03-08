@@ -3,6 +3,8 @@
   "usingComponents": {
     "my-footer": "../footer/footer",
     "mp-toptips": "../../miniprogram_npm/weui-miniprogram/toptips/toptips",
-    "mp-msg": "../../miniprogram_npm/weui-miniprogram/msg/msg"
+    "mp-msg": "../../miniprogram_npm/weui-miniprogram/msg/msg",
+    "wux-button": "../../miniprogram_npm/wux-weapp/button/index",
+    "wux-loading": "../../miniprogram_npm/wux-weapp/loading/index"
   }
 }

@@ -1,25 +1,11 @@
 // pages/daily/daily.js
 const util = require('../../utils/util.js')
+import { $wuxLoading } from '../../miniprogram_npm/wux-weapp/index';
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    array: [{
-      message: 'foo',
-    }, {
-      message: 'bar'
-    }, {
-      message: '1'
-    }, {
-      message: 'b2ar'
-    }, {
-      message: '1123'
-    }, {
-      message: 'b2123ar'
-    }],
-    tags:['你好','测试','123','123123123'],
-    src: 'https://api.rqcao.com/image/image_811.jpg',
     // 每日诗词
     poem: {},
     // 每日名句

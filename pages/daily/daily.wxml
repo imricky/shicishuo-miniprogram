@@ -4,7 +4,6 @@
 <!--    <text class="log-item">{{index + 1}}. {{log}}</text>-->
 <!--  </block>-->
 <!--</view>-->
-
 <view class="container">
   <view class="poem">
     <text class="title">{{poem.title}}</text>
@@ -20,6 +19,7 @@
       </block>
       <block class="collect-container">
         <button type="primary" size="mini" plain="{{true}}" bindtap="collect" class="collect-container"> 收藏 </button>
+<!--        <wux-button block outline type="stable" class="collect-container">stable</wux-button>-->
       </block>
     </view>
 
@@ -30,7 +30,7 @@
     </view>
     <view class="main">
       <view class="paragraph-all">
-        <image style="width: 200rpx; height: 200rpx; background-color: #eeeeee;" mode="scaleToFill" src="{{src}}"></image>
+        <image style="width: 200rpx; height: 200rpx; background-color: #eeeeee;" mode="scaleToFill" src="{{paragraph.src}}"></image>
         <view class="paragraph-info">
           <block wx:for="{{paragraph.content}}" wx:key="*this">
             <text  class="paragraph-content">{{item}}</text>
