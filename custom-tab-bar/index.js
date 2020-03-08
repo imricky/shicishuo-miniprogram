@@ -14,15 +14,15 @@ Component({
       selectedIconPath: "/image/explore_HL.png",
       text: "探索好诗"
     }, {
-      pagePath: "/pages/library/library",
-      iconPath: "/image/library.png",
-      selectedIconPath: "/image/library_HL.png",
-      text: "文库大全"
-    }, {
       pagePath: "/pages/cool/cool",
       iconPath: "/image/cool.png",
       selectedIconPath: "/image/cool_HL.png",
       text: "酷功能"
+    }, {
+      pagePath: "/pages/user/user",
+      iconPath: "/image/user.png",
+      selectedIconPath: "/image/user_HL.png",
+      text: "我的"
     }]
   },
   attached() {

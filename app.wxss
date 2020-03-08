@@ -19,3 +19,8 @@ page {
   background-color: rgba(250,250,250,0.90);
   /*background-color: #F6F8FA;*/
 }
+
+.placeholder-view{
+  width: 100%;
+  height: 150rpx;
+}
