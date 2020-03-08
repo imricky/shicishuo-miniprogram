@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/daily/daily",
     "pages/explore/explore",
+    "pages/daily/daily",
     "pages/cool/cool",
     "pages/library/library",
     "pages/logs/logs",

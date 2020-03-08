@@ -1,2 +1,31 @@
 <!--pages/explore/explore.wxml-->
-<text>pages/explore/explore.wxml</text>
+<view class="page">
+<!--  <view class="page__hd">-->
+<!--&lt;!&ndash;    <view class="page__title">探索好诗</view>&ndash;&gt;-->
+<!--    <view class="page__desc">好雨知时节，当春乃发生❤</view>-->
+<!--  </view>-->
+  <view class="page__bd">
+    <wux-accordion-group title="选择一个标签，探索你的❤️️" accordion label="好雨知时节，当春乃发生✨" default-current="{{ ['0'] }}" bind:change="onChange">
+      <wux-accordion thumb="https://cdn.skyvow.cn/logo.png" title="标签 Tags" >
+        <wux-spin nested spinning="{{ spinning }}" tip="Loading...">
+          <block wx:for="{{top20Tags}}" wx:key="{{item._id}}">
+            <wux-button type="positive" outline size="default" class="tag-button">{{item._id}}</wux-button>
+          </block>
+        </wux-spin>
+      </wux-accordion>
+      <wux-accordion thumb="https://cdn.skyvow.cn/logo.png" title="作者 Authors">
+        <block wx:for="{{top20Authors}}" wx:key="{{item._id}}">
+          <wux-button type="balanced" outline size="default" class="tag-button">{{item._id}}</wux-button>
+        </block>
+      </wux-accordion>
+      <wux-accordion thumb="https://cdn.skyvow.cn/logo.png" title="朝代 Dynasty">
+        <block wx:for="{{dynasty}}" wx:key="*this">
+          <wux-button type="calm" outline size="default" class="tag-button">{{item}}</wux-button>
+        </block>
+      </wux-accordion>
+      <wux-accordion thumb="https://cdn.skyvow.cn/logo.png" title="形式 Forms" content="敬请期待"></wux-accordion>
+    </wux-accordion-group>
+  </view>
+</view>
+
+

@@ -1,1 +1,7 @@
 /* pages/explore/explore.wxss */
+.tag-button{
+  padding-left: 40rpx;
+}
+.wux-button--default{
+  margin-bottom: 20rpx !important;
+}

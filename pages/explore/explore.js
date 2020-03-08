@@ -5,7 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
+    spinning: true,
+    dynasty: ['唐','宋','元','明','清'],
+    top20Tags: [],
+    top20Authors: []
+  },
+  onChange(e) {
+    console.log(e)
 
+    // if (e.detail.key.indexOf(this.key) !== -1) {
+    //   return wx.showModal({
+    //     title: 'No switching is allowed',
+    //     showCancel: !1,
+    //   })
+    // }
+    //
+    // this.setData({
+    //   current: e.detail.key,
+    // })
   },
 
   /**
@@ -26,12 +43,35 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if (typeof this.getTabBar === 'function' &&
-      this.getTabBar()) {
+    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
       this.getTabBar().setData({
         selected: 1
       })
     }
+    var _self = this;
+    wx.request({
+      url: 'https://api.rqcao.com/poems/exploreGoodPoemAll', //仅为示例，并非真实的接口地址
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success (res) {
+        if(res.data.code === 200){
+          let result = res.data.data;
+          console.log(result);
+          _self.setData({
+            top20Tags: result.top20Tags,
+            top20Authors: result.top20Authors,
+          })
+        }
+      },
+      fail: () => {},
+      complete: () => {
+        _self.setData({
+          spinning: !this.data.spinning,
+        })
+      }
+    })
+
   },
 
   /**
