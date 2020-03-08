@@ -3,7 +3,6 @@
     "wux-accordion-group": "../../miniprogram_npm/wux-weapp/accordion-group/index",
     "wux-accordion": "../../miniprogram_npm/wux-weapp/accordion/index",
     "wux-icon": "../../miniprogram_npm/wux-weapp/icon/index",
-    "wux-button": "../../miniprogram_npm/wux-weapp/button/index",
-    "wux-spin": "../../miniprogram_npm/wux-weapp/spin/index"
+    "wux-button": "../../miniprogram_npm/wux-weapp/button/index"
   }
 }

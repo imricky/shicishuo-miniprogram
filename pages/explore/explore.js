@@ -43,6 +43,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    wx.showLoading({
+      title: '加载中',
+    });
     if (typeof this.getTabBar === 'function' && this.getTabBar()) {
       this.getTabBar().setData({
         selected: 1
@@ -57,7 +60,6 @@ Page({
       success (res) {
         if(res.data.code === 200){
           let result = res.data.data;
-          console.log(result);
           _self.setData({
             top20Tags: result.top20Tags,
             top20Authors: result.top20Authors,
@@ -66,9 +68,7 @@ Page({
       },
       fail: () => {},
       complete: () => {
-        _self.setData({
-          spinning: !this.data.spinning,
-        })
+        wx.hideLoading()
       }
     })
 
