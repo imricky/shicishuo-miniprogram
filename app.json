@@ -2,9 +2,10 @@
   "pages": [
     "pages/daily/daily",
     "pages/logs/logs",
-
-    "pages/index/index"
-
+    "pages/index/index",
+    "pages/explore/explore",
+    "pages/cool/cool",
+    "pages/library/library"
   ],
   "tabBar": {
     "custom": true,
@@ -14,22 +15,28 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "iconPath": "image/icon_component.png",
-        "selectedIconPath": "image/icon_component_HL.png",
-        "text": "组件"
-      },
-      {
-        "pagePath": "pages/logs/logs",
-        "iconPath": "image/icon_API.png",
-        "selectedIconPath": "image/icon_API_HL.png",
-        "text": "接口"
-      },
-      {
         "pagePath": "pages/daily/daily",
-        "iconPath": "image/icon_API.png",
-        "selectedIconPath": "image/icon_API_HL.png",
-        "text": "日常"
+        "iconPath": "image/day.png",
+        "selectedIconPath": "image/day_HL.png",
+        "text": "每日一诗"
+      },
+      {
+        "pagePath": "pages/explore/explore",
+        "iconPath": "image/explore.png",
+        "selectedIconPath": "image/explore_HL.png",
+        "text": "探索好诗"
+      },
+      {
+        "pagePath": "pages/library/library",
+        "iconPath": "image/library.png",
+        "selectedIconPath": "image/library_HL.png",
+        "text": "文库大全"
+      },
+      {
+        "pagePath": "pages/cool/cool",
+        "iconPath": "image/cool.png",
+        "selectedIconPath": "image/cool_HL.png",
+        "text": "酷功能"
       }
     ]
   },
