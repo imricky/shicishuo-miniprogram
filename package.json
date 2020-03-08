@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "weui-miniprogram": "^0.2.1"
+    "weui-miniprogram": "^0.2.1",
+    "wux-weapp": "^3.8.5"
   }
 }
