@@ -4,6 +4,11 @@
     "wux-accordion-group": "../../miniprogram_npm/wux-weapp/accordion-group/index",
     "wux-accordion": "../../miniprogram_npm/wux-weapp/accordion/index",
     "wux-icon": "../../miniprogram_npm/wux-weapp/icon/index",
-    "wux-button": "../../miniprogram_npm/wux-weapp/button/index"
+    "wux-button": "../../miniprogram_npm/wux-weapp/button/index",
+    "wux-search-bar": "../../miniprogram_npm/wux-weapp/search-bar/index",
+    "wux-white-space": "../../miniprogram_npm/wux-weapp/white-space/index",
+    "wux-divider": "../../miniprogram_npm/wux-weapp/divider/index",
+    "wux-cell-group": "../../miniprogram_npm/wux-weapp/cell-group/index",
+    "wux-cell": "../../miniprogram_npm/wux-weapp/cell/index"
   }
 }
