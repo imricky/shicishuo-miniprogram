@@ -24,6 +24,9 @@ Page({
     //   current: e.detail.key,
     // })
   },
+  clickItem(e){
+    console.log(e);
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -60,6 +63,7 @@ Page({
       success (res) {
         if(res.data.code === 200){
           let result = res.data.data;
+          console.log(result);
           _self.setData({
             top20Tags: result.top20Tags,
             top20Authors: result.top20Authors,

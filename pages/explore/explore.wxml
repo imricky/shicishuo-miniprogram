@@ -9,13 +9,13 @@
   <view class="page__bd">
     <wux-accordion-group title="选择一个标签，探索你的诗✨" accordion  default-current="{{ ['0'] }}" bind:change="onChange">
       <wux-accordion thumb="../../../image/explore_tags.png" title="标签 Tags" >
-        <block wx:for="{{top20Tags}}" wx:key="{{item._id}}">
-          <wux-button type="positive" outline size="default" class="tag-button">{{item._id}}</wux-button>
+        <block wx:for="{{top20Tags}}" wx:key="_id">
+          <wux-button type="positive" outline size="default" class="tag-button" bind:click="clickItem" data-text="{{item._id}}" data-type="tags">{{item._id}}</wux-button>
         </block>
       </wux-accordion>
       <wux-accordion thumb="../../../image/explore_authors.png" title="作者 Authors">
-        <block wx:for="{{top20Authors}}" wx:key="{{item._id}}">
-          <wux-button type="balanced" outline size="default" class="tag-button">{{item._id}}</wux-button>
+        <block wx:for="{{top20Authors}}" wx:key="_id">
+          <wux-button type="balanced" outline size="default" class="tag-button" bind:click="clickItem" data-text="{{item._id}}" data-type="authors">{{item._id}}</wux-button>
         </block>
       </wux-accordion>
       <wux-accordion thumb="../../../image/explore_history.png" title="朝代 Dynasty">
