@@ -1,6 +1,7 @@
 <!--pages/explore/explore.wxml-->
-<view class="page">
 
+<view class="page">
+  <wux-toast id="wux-toast" />
   <view class="page__bd">
     <wux-search-bar clear value="{{ value }}" controlled placeholder="搜索" bind:change="onChange" bind:focus="onFocus" bind:blur="onBlur" bind:confirm="onConfirm" bind:clear="onClear" bind:cancel="onCancel" />
   </view>
@@ -20,7 +21,7 @@
       </wux-accordion>
       <wux-accordion thumb="../../../image/explore_history.png" title="朝代 Dynasty">
         <block wx:for="{{dynasty}}" wx:key="*this">
-          <wux-button type="calm" outline size="default" class="tag-button">{{item}}</wux-button>
+          <wux-button type="calm" outline size="default" class="tag-button" bind:click="clickItemNotReady" data-text="{{item._id}}" data-type="dynasty">{{item}}</wux-button>
         </block>
       </wux-accordion>
       <wux-accordion thumb="../../../image/explore_types.png" title="形式 Types" content="敬请期待"></wux-accordion>

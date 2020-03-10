@@ -1,0 +1,30 @@
+<!--pages/explore/tagList.wxml-->
+<block wx:for="{{poems}}" wx:key="_id">
+  <wux-wing-blank size="default">
+    <wux-white-space size="small" />
+    <wux-card title="{{item.title}}" extra="{{item.type === 'tang' ? '【唐】' : '【宋】'}}{{item.author}}">
+        <view slot="body">
+          <view wx:for="{{item.paragraphs}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemName" class="paragraph-one">
+            <text >{{itemName}}</text>
+          </view>
+        </view>
+        <view slot="footer">
+          <view class="poem-tag">
+            <view wx:for="{{item.tags}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemName">
+              <wux-tag>{{itemName}}</wux-tag>
+            </view>
+          </view>
+        </view>
+    </wux-card> 
+  </wux-wing-blank>
+</block>
+
+
+<wux-white-space size="default" />
+
+<wux-pagination current="{{ current }}" total="{{totalCount}}" mode="button" controlled bind:change="pageChange">
+    <view slot="prev"><wux-icon type="md-arrow-dropleft" /></view>
+    <view slot="next"><wux-icon type="md-arrow-dropright" /></view>
+</wux-pagination>
+
+ <view class='placeholder-view'></view>

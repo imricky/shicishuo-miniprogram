@@ -9,6 +9,7 @@
     "wux-white-space": "../../miniprogram_npm/wux-weapp/white-space/index",
     "wux-divider": "../../miniprogram_npm/wux-weapp/divider/index",
     "wux-cell-group": "../../miniprogram_npm/wux-weapp/cell-group/index",
-    "wux-cell": "../../miniprogram_npm/wux-weapp/cell/index"
+    "wux-cell": "../../miniprogram_npm/wux-weapp/cell/index",
+    "wux-toast": "../../miniprogram_npm/wux-weapp/toast/index"
   }
 }

@@ -1,4 +1,5 @@
 // pages/explore/explore.js
+import { $wuxToast } from '../../miniprogram_npm/wux-weapp/index'
 Page({
 
   /**
@@ -26,6 +27,24 @@ Page({
   },
   clickItem(e){
     console.log(e);
+    const tag = e.currentTarget.dataset.text;
+    const type = e.currentTarget.dataset.type;
+    wx.navigateTo({
+      url: '/pages/explore/tagList',
+      success: function (res) {
+        // 通过eventChannel向被打开页面传送数据
+        res.eventChannel.emit('acceptDataFromOpenerPage', { tag,type })
+      }
+    });
+  },
+  clickItemNotReady(e){
+    $wuxToast().show({
+      type: 'default',
+      duration: 1500,
+      color: '#fff',
+      icon: 'ios-heart',
+      text: '敬请期待',
+    })
   },
 
   /**
