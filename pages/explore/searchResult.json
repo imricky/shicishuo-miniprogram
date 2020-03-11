@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "wux-pagination": "../../miniprogram_npm/wux-weapp/pagination/index",
+    "wux-white-space": "../../miniprogram_npm/wux-weapp/white-space/index",
+    "wux-icon": "../../miniprogram_npm/wux-weapp/icon/index"
+  }
+}

@@ -6,7 +6,8 @@
     "pages/logs/logs",
     "pages/index/index",
     "pages/user/user",
-    "pages/explore/tagList"
+    "pages/explore/tagList",
+    "pages/explore/searchResult"
   ],
   "tabBar": {
     "custom": true,

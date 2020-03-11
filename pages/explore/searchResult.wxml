@@ -1,0 +1,7 @@
+<!--pages/explore/searchResult.wxml-->
+<text>pages/explore/searchResult.wxml</text>
+
+<wux-pagination current="{{ current }}" total="{{totalCount}}" mode="button" controlled bind:change="pageChange">
+  <view slot="prev"><wux-icon type="md-arrow-dropleft" /></view>
+  <view slot="next"><wux-icon type="md-arrow-dropright" /></view>
+</wux-pagination>
