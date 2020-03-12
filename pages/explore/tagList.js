@@ -16,7 +16,7 @@ Page({
 
     this.setData({
       current: e.detail.current,
-    })
+    });
 
     this.getPoemsData(this.data.tag, this.data.type, this.data.current);
   },

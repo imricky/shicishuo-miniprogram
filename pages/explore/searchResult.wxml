@@ -1,6 +1,18 @@
 <!--pages/explore/searchResult.wxml-->
 <text>pages/explore/searchResult.wxml</text>
 
+<wux-wing-blank size="default">
+  <wux-row>
+    <wux-col span="4">
+      <view class="placeholder">wux</view>
+    </wux-col>
+    <wux-col span="8">
+      <view class="placeholder">wux</view>
+    </wux-col>
+  </wux-row>
+</wux-wing-blank>
+
+
 <wux-pagination current="{{ current }}" total="{{totalCount}}" mode="button" controlled bind:change="pageChange">
   <view slot="prev"><wux-icon type="md-arrow-dropleft" /></view>
   <view slot="next"><wux-icon type="md-arrow-dropright" /></view>
