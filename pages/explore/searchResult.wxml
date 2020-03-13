@@ -1,19 +1,65 @@
 <!--pages/explore/searchResult.wxml-->
-<text>pages/explore/searchResult.wxml</text>
 
-<wux-wing-blank size="default">
-  <wux-row>
-    <wux-col span="4">
-      <view class="placeholder">wux</view>
-    </wux-col>
-    <wux-col span="8">
-      <view class="placeholder">wux</view>
-    </wux-col>
-  </wux-row>
-</wux-wing-blank>
+<wux-divider position="left" text="相关诗人" />
+<!--两翼留白-->
+<wux-row>
+  <wux-col span="4">
+    <view >
+      <image style="width: 200rpx; height: 200rpx; background-color: #eeeeee;" mode="scaleToFill" src="https://api.rqcao.com/image/image_811.jpg"></image>
+    </view>
+  </wux-col>
+  <wux-col span="8">
+    <view class="author-info">
+      <text class="author-name">{{author._source.name}}</text>
+      <text class="author-desc">{{author._source.desc}}</text>
+    </view>
+  </wux-col>
+</wux-row>
+
+<wux-divider position="left" text="相关标签" />
+
+<view class="all-tags">
+  <wux-tag>magenta</wux-tag>
+  <wux-tag color="magenta">magenta</wux-tag>
+  <wux-tag color="red">red</wux-tag>
+  <wux-tag color="volcano">volcano</wux-tag>
+  <wux-tag color="orange">orange</wux-tag>
+  <wux-tag color="gold">gold</wux-tag>
+  <wux-tag color="lime">lime</wux-tag>
+  <wux-tag color="green">green</wux-tag>
+  <wux-tag color="cyan">cyan</wux-tag>
+  <wux-tag color="blue">blue</wux-tag>
+  <wux-tag color="geekblue">geekblue</wux-tag>
+  <wux-tag color="purple">purple</wux-tag>
+</view>
+
+<wux-divider position="left" text="相关诗词" />
+
+<block wx:for="{{poems}}" wx:key="_id">
+  <wux-wing-blank size="default">
+    <wux-white-space size="small" />
+    <wux-card title="{{item._source.title}}" extra="{{item._source.author}}">
+      <view slot="body">
+        <view wx:for="{{item._source.paragraphs}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemName" class="paragraph-one">
+          <text >{{itemName}}</text>
+        </view>
+      </view>
+      <view slot="footer">
+        <view class="poem-tag">
+          <view wx:for="{{item._source.tags}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemName">
+            <wux-tag>{{itemName}}</wux-tag>
+          </view>
+        </view>
+      </view>
+    </wux-card>
+  </wux-wing-blank>
+</block>
+
 
 
 <wux-pagination current="{{ current }}" total="{{totalCount}}" mode="button" controlled bind:change="pageChange">
   <view slot="prev"><wux-icon type="md-arrow-dropleft" /></view>
   <view slot="next"><wux-icon type="md-arrow-dropright" /></view>
 </wux-pagination>
+
+<view class='placeholder-view'></view>

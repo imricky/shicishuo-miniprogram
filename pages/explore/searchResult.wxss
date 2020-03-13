@@ -1,1 +1,35 @@
 /* pages/explore/searchResult.wxss */
+.author-info{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.author-name{
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.author-desc{
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:-webkit-box; /*作为弹性伸缩盒子模型显示。*/
+  -webkit-box-orient:vertical; /*设置伸缩盒子的子元素排列方式--从上到下垂直排列*/
+  -webkit-line-clamp:4; /*显示的行*/
+}
+/*调整默认tag的大小*/
+.wux-tag{
+  font-size: 30rpx !important;
+}
+
+.paragraph-one{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.poem-tag{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
