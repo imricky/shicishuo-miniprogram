@@ -91,6 +91,7 @@ Page({
         tag: data.tag,
         type: data.type,
       })
+      _self.getPoemsData(_self.data.tag, _self.data.type, _self.data.current);
     })
   },
 
@@ -105,12 +106,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
-      this.getTabBar().setData({
-        selected: 1
-      })
-    }
-    this.getPoemsData(this.data.tag, this.data.type, this.data.current);
+    // if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+    //   this.getTabBar().setData({
+    //     selected: 1
+    //   })
+    // }
+    // this.getPoemsData(this.data.tag, this.data.type, this.data.current);
   },
 
   /**

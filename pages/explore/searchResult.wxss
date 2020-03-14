@@ -19,7 +19,8 @@
 }
 /*调整默认tag的大小*/
 .wux-tag{
-  font-size: 30rpx !important;
+  font-size: 34rpx !important;
+  margin-bottom: 10rpx !important;
 }
 
 .paragraph-one{

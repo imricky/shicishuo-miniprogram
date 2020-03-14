@@ -28,18 +28,11 @@ Page({
     //   value: '',
     // })
   },
-  onConfirm(e) {
+  onCancel(e) {
     console.log('onConfirm', e)
-    let inputValue = e.detail.value;
-    if(inputValue === ''){
-      $wuxToast().show({
-        type: 'default',
-        duration: 1500,
-        color: '#fff',
-        // icon: 'ios-heart',
-        text: '请输入内容...',
-      })
-    }
+    this.setData({
+      value: '',
+    })
   },
   onClear(e) {
     console.log('onClear', e)
@@ -47,8 +40,7 @@ Page({
       value: '',
     })
   },
-  onCancel(e) {
-    // 这里先模拟键盘的搜索按钮功能
+  onConfirm(e) {
     let _self = this;
     console.log('onCancel', e)
     var inputValue = e.detail.value;
