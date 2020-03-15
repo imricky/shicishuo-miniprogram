@@ -1,3 +1,10 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "wux-row": "../../miniprogram_npm/wux-weapp/row/index",
+    "wux-col": "../../miniprogram_npm/wux-weapp/col/index",
+    "wux-image": "../../miniprogram_npm/wux-weapp/image/index",
+    "wux-white-space": "../../miniprogram_npm/wux-weapp/white-space/index",
+    "wux-cell-group": "../../miniprogram_npm/wux-weapp/cell-group/index",
+    "wux-cell": "../../miniprogram_npm/wux-weapp/cell/index"
+  }
 }

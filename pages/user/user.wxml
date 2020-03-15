@@ -1,2 +1,22 @@
 <!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view>
+  <view class="image-src">
+    <wux-image wux-class="image" shape="circle" width="200rpx" height="200rpx" src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg">
+    </wux-image>
+    <block>
+      <text class="user-name">play1</text>
+      <text class="user-desc">宝剑锋从磨砺出，梅花香自苦寒来</text>
+      <text class="user-count">收藏数：123 点赞数：456 被点赞：789</text>
+    </block>
+  </view>
+</view>
+<wux-white-space size="large" />
+
+<view class="main-list">
+  <wux-cell-group label="诗词说v1.0">
+    <wux-cell title="收藏列表" url="/pages/index/index" is-link></wux-cell>
+    <wux-cell title="我的创作" is-link url="/pages/index/index" label="你创作的诗都记录在这里"></wux-cell>
+    <wux-cell title="个人设置" url="/pages/index/index" is-link></wux-cell>
+    <wux-cell title="敬请期待" url="/pages/index/index" is-link></wux-cell>
+  </wux-cell-group>
+</view>

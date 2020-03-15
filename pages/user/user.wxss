@@ -1,1 +1,24 @@
 /* pages/user/user.wxss */
+.image-src{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /*background: #F1F1F1;*/
+  /*border: 1px solid red;*/
+  margin-top: 30rpx;
+}
+.user-name{
+  margin-top: 10rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #4D4D4D;
+}
+.user-desc{
+  color: #AAAAAA;
+  font-size: 32rpx;
+}
+.user-count{
+  font-size: 32rpx;
+  color: #888888;
+}
