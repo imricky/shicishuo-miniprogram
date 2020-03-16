@@ -22,3 +22,15 @@
   font-size: 32rpx;
   color: #888888;
 }
+
+.tag-button{
+  padding-left: 40rpx;
+}
+
+.login-register{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 60rpx;
+}
