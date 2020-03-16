@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "Form",
+  "usingComponents": {
+    "wux-cell-group": "../../miniprogram_npm/wux-weapp/cell-group/index",
+    "wux-cell": "../../miniprogram_npm/wux-weapp/cell/index",
+    "wux-form": "../../miniprogram_npm/wux-weapp/form/index",
+    "wux-field": "../../miniprogram_npm/wux-weapp/field/index",
+    "wux-input": "../../miniprogram_npm/wux-weapp/input/index",
+    "wux-icon": "../../miniprogram_npm/wux-weapp/icon/index",
+    "wux-button": "../../miniprogram_npm/wux-weapp/button/index",
+    "wux-image": "../../miniprogram_npm/wux-weapp/image/index"
+  }
+}
