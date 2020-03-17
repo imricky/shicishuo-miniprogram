@@ -1,3 +1,5 @@
+<wux-toptips id="wux-toptips" />
+<wux-toast id="wux-toast" />
 <view class="page">
   <view class="image-src">
     <wux-image wux-class="image" shape="circle" width="200rpx" height="200rpx" src="../../../image/mylogo.png">
@@ -5,7 +7,7 @@
     <text class="title">诗词说</text>
   </view>
   <view class="page__bd">
-    <wux-form id="wux-form" bind:change="onChange">
+    <wux-form id="wux-form">
       <wux-cell-group title="请输入用户名和密码">
         <wux-cell hover-class="none">
           <wux-field name="username" initialValue="">
@@ -20,7 +22,7 @@
       </wux-cell-group>
 
       <view class="btn-area">
-        <wux-button block outline type="balanced"><wux-icon type="ios-save" size="16" /> 登录 </wux-button>
+        <wux-button block outline type="balanced" bind:click="login"><wux-icon type="ios-send" size="16" /> 登录 </wux-button>
         <wux-button block clear type="dark">我忘记密码了</wux-button>
       </view>
     </wux-form>
