@@ -34,6 +34,12 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    user: {
+      _id: null,
+      username: null,
+      token: null,
+      avatar: '',
+    }
   }
 })
