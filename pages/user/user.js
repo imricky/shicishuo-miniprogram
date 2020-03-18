@@ -7,12 +7,13 @@ Page({
    */
   data: {
     src: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg', // 头像地址
-    username: '123',
+    username: '',
     userDesc: '宝剑锋从磨砺出，梅花香自苦寒来',
     isLogin: false
   },
 
   goLogin: function(){
+    let _self = this;
     wx.navigateTo({
       url: 'login',
       events: {
@@ -20,8 +21,11 @@ Page({
         acceptDataFromOpenedPage: function(data) {
           console.log(data)
         },
-        someEvent: function(data) {
-          console.log(data)
+        // 在这里设置user页面的用户名
+        loginSuccessBack: function(data) {
+          _self.setData({
+            username: app.globalData.user.username
+          });
         }
       },
       success: function(res) {
@@ -32,6 +36,7 @@ Page({
   },
 
   goRegister: function(){
+    let _self = this;
     wx.navigateTo({
       url: 'register',
       events: {
@@ -39,14 +44,27 @@ Page({
         acceptDataFromOpenedPage: function(data) {
           console.log(data)
         },
-        someEvent: function(data) {
-          console.log(data)
+        // 在这里设置user页面的用户名
+        registerSuccessBack: function(data) {
+          _self.setData({
+            username: app.globalData.user.username
+          });
         }
       },
       success: function(res) {
         // 通过eventChannel向被打开页面传送数据
         // res.eventChannel.emit('acceptDataFromOpenerPage', { data: 'test' })
       }
+    })
+  },
+
+  logout: function(){
+    app.globalData.user.username = '';
+    app.globalData.user.token = '';
+    app.globalData.user._id = '';
+    app.globalData.user.avatar = '';
+    this.setData({
+      isLogin: false
     })
   },
 
