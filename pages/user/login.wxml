@@ -16,7 +16,7 @@
         </wux-cell>
         <wux-cell hover-class="none">
           <wux-field name="password" initialValue="">
-            <wux-input label="密码" />
+            <wux-input label="密码" password/>
           </wux-field>
         </wux-cell>
       </wux-cell-group>
