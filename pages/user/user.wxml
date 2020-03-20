@@ -1,4 +1,6 @@
 <!--pages/user/user.wxml-->
+<wux-toast id="wux-toast" />
+
 <view>
   <view class="image-src">
     <wux-image wux-class="image" shape="circle" width="200rpx" height="200rpx" src="{{src}}">
@@ -21,10 +23,10 @@
 
 <view class="main-list">
   <wux-cell-group label="诗词说v1.0">
-    <wux-cell title="收藏列表" url="/pages/index/index" is-link></wux-cell>
+    <wux-cell title="收藏列表" isLink bind:click="goCollect" ></wux-cell>
     <wux-cell title="我的创作" is-link url="/pages/index/index" label="你创作的诗都记录在这里"></wux-cell>
     <wux-cell title="个人设置" url="/pages/index/index" is-link></wux-cell>
-    <wux-cell title="敬请期待" url="/pages/index/index" is-link></wux-cell>
+<!--    <wux-cell title="敬请期待" url="/pages/index/index" is-link></wux-cell>-->
     <wux-cell wx:if="{{isLogin === true}}">
       <wux-button block type="assertive" bind:click="logout">注销</wux-button>
     </wux-cell>

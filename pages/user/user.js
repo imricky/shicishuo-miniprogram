@@ -1,4 +1,5 @@
 // pages/user/user.js
+import { $wuxToptips, $wuxToast } from '../../miniprogram_npm/wux-weapp/index'
 const app = getApp();
 Page({
 
@@ -66,6 +67,36 @@ Page({
     this.setData({
       isLogin: false
     })
+  },
+  goCollect: function(){
+    console.log(123);
+    console.log(app.globalData.user.username)
+    if(!app.globalData.user.username){
+      $wuxToast().show({
+        type: 'forbidden',
+        duration: 2000,
+        color: '#fff',
+        text: '请登录后查看',
+      });
+      return;
+    }else {
+      wx.navigateTo({
+        url: 'collections',
+        // events: {
+        //   // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
+        //   acceptDataFromOpenedPage: function(data) {
+        //     console.log(data)
+        //   },
+        //   someEvent: function(data) {
+        //     console.log(data)
+        //   }
+        // },
+        success: function(res) {
+          // 通过eventChannel向被打开页面传送数据
+          res.eventChannel.emit('acceptDataFromOpenerPage', { data: 'test' })
+        }
+      })
+    }
   },
 
   /**
