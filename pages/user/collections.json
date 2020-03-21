@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "wux-card": "../../miniprogram_npm/wux-weapp/card/index",
+    "wux-wing-blank": "../../miniprogram_npm/wux-weapp/wing-blank/index",
+    "wux-pagination": "../../miniprogram_npm/wux-weapp/pagination/index",
+    "wux-icon": "../../miniprogram_npm/wux-weapp/icon/index",
+    "wux-white-space": "../../miniprogram_npm/wux-weapp/white-space/index",
+    "wux-tag": "../../miniprogram_npm/wux-weapp/tag/index",
+    "wux-prompt": "../../miniprogram_npm/wux-weapp/prompt/index"
+  }
+}
