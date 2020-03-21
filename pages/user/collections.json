@@ -6,6 +6,8 @@
     "wux-icon": "../../miniprogram_npm/wux-weapp/icon/index",
     "wux-white-space": "../../miniprogram_npm/wux-weapp/white-space/index",
     "wux-tag": "../../miniprogram_npm/wux-weapp/tag/index",
-    "wux-prompt": "../../miniprogram_npm/wux-weapp/prompt/index"
+    "wux-prompt": "../../miniprogram_npm/wux-weapp/prompt/index",
+    "wux-swipe-action-group": "../../miniprogram_npm/wux-weapp/swipe-action-group/index",
+    "wux-swipe-action": "../../miniprogram_npm/wux-weapp/swipe-action/index"
   }
 }

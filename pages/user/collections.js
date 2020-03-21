@@ -15,6 +15,18 @@ Page({
       title: '空空如也',
       text: '暂时没有搜索到相关数据',
     },
+    right: [
+      {
+        text: '删除',
+        style: 'background-color: #F4333C; color: white',
+      }],
+  },
+  // 删除收藏
+  removeCollect(e){
+    console.log('guanbi');
+    console.log(e);
+    let poemId = e.target.dataset.poemid;
+    console.log(poemId)
   },
   pageChange(e) {
     console.log('onChange', e);
@@ -92,8 +104,8 @@ Page({
     this.setData({
       _id: app.globalData.user._id
     });
-    this.getPoemsData(this.data._id,this.data.current);
-    //this.getPoemsData('5e723d1702330a07d00573be',this.data.current);
+    //this.getPoemsData(this.data._id,this.data.current);
+    this.getPoemsData('5df35330e6c9648c5a0bace4',this.data.current);
   },
 
   /**

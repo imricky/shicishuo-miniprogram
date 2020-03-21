@@ -7,20 +7,24 @@
   <block wx:for="{{poems}}" wx:key="_id">
     <wux-wing-blank size="default">
       <wux-white-space size="small" />
-      <wux-card title="{{item.title}}" extra="{{item.type === 'tang' ? '【唐】' : '【宋】'}}{{item.author}}">
-        <view slot="body">
-          <view wx:for="{{item.paragraphs}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemName" class="paragraph-one">
-            <text >{{itemName}}</text>
-          </view>
-        </view>
-        <view slot="footer">
-          <view class="poem-tag">
-            <view wx:for="{{item.tags}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemName">
-              <wux-tag>{{itemName}}</wux-tag>
+
+      <wux-swipe-action autoClose right="{{ right }}" bind:click="removeCollect" data-poemid="{{item._id}}">
+        <wux-card title="{{item.title}}" extra="{{item.type === 'tang' ? '【唐】' : '【宋】'}}{{item.author}}">
+          <view slot="body">
+            <view wx:for="{{item.paragraphs}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemName" class="paragraph-one">
+              <text >{{itemName}}</text>
             </view>
           </view>
-        </view>
-      </wux-card>
+          <view slot="footer">
+            <view class="poem-tag">
+              <view wx:for="{{item.tags}}" wx:key="*this" wx:for-index="idx" wx:for-item="itemName">
+                <wux-tag>{{itemName}}</wux-tag>
+              </view>
+            </view>
+          </view>
+        </wux-card>
+      </wux-swipe-action>
+
     </wux-wing-blank>
   </block>
 
